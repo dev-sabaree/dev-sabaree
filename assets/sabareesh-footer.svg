@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 160" width="1200" height="160" role="img" aria-labelledby="foot-title foot-desc">
+  <title id="foot-title">Building • Learning • Shipping</title>
+  <desc id="foot-desc">Animated Cyber Blue footer with a thin signal line and small technical geometry.</desc>
+
+  <defs>
+    <linearGradient id="foot-bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081426"/>
+      <stop offset="1" stop-color="#050B14"/>
+    </linearGradient>
+
+    <linearGradient id="foot-line-grad" gradientUnits="userSpaceOnUse" x1="80" y1="0" x2="1120" y2="0">
+      <stop offset="0" stop-color="#1261A0" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#1261A0"/>
+      <stop offset="0.5" stop-color="#168BFF"/>
+      <stop offset="0.8" stop-color="#1261A0"/>
+      <stop offset="1" stop-color="#1261A0" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="foot-signal-grad" gradientUnits="userSpaceOnUse" x1="80" y1="0" x2="1120" y2="0">
+      <stop offset="0" stop-color="#71C7FF" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#B9E5FF"/>
+      <stop offset="1" stop-color="#71C7FF" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <radialGradient id="foot-glow-grad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#168BFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#168BFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="160" rx="18" fill="url(#foot-bg-grad)"/>
+  <rect x="0.5" y="0.5" width="1199" height="159" rx="17.5" fill="none" stroke="#1261A0" stroke-opacity="0.55"/>
+
+  <ellipse cx="600" cy="118" rx="360" ry="60" fill="url(#foot-glow-grad)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Signal line: base -->
+  <path d="M80 118H470L486 102H714L730 118H1120" fill="none" stroke="url(#foot-line-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Signal line: moving pulse -->
+  <path d="M80 118H470L486 102H714L730 118H1120" pathLength="1000" fill="none" stroke="url(#foot-signal-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="70 930" stroke-dashoffset="-120">
+    <animate attributeName="stroke-dashoffset" values="-120;-1120" dur="9s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Nodes -->
+  <g fill="#050B14" stroke="#71C7FF" stroke-width="1.5">
+    <circle cx="470" cy="118" r="3.5"/>
+    <circle cx="730" cy="118" r="3.5"/>
+  </g>
+  <circle cx="600" cy="102" r="3" fill="#168BFF">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Small geometry -->
+  <g fill="none" stroke="#71C7FF" stroke-opacity="0.4" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M80 118l8-8 8 8-8 8z"/>
+    <path d="M1104 118l8-8 8 8-8 8z"/>
+  </g>
+
+  <!-- Closing text -->
+  <text x="600" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" letter-spacing="3" fill="#B9E5FF">Building • Learning • Shipping</text>
+</svg>
